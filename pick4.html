@@ -1,0 +1,27 @@
+<html>
+    <!-- Pick4.html generates a 4-digit lottery pick from X possible numbers -->
+    <!-- by Kendrick Smith -->
+    <!-- V 1.0 22 Oct. 2019 -->
+    <head>
+    </head>
+    <body>
+        <h1>Pick-4</h1>
+        <p>How many numbers will we pick from?</p>
+        <input id="digits" value="0">
+        <br>
+        <button onclick="
+                         document.getElementById('calcs').innerHTML = (document.getElementById('calcs').innerHTML*1) + 1;
+                        
+                         bins= document.getElementById('digits').value*1;
+                         
+                         document.getElementById('score').innerHTML= 
+                         Math.floor((bins*Math.random())+1)+'-'+Math.floor((bins*Math.random())+1)+'-'+Math.floor((bins*Math.random())+1)+'-'+Math.floor((bins*Math.random())+1);
+                         
+                         document.getElementById('odds').innerHTML= Math.pow(bins,4);
+                         "
+            >Will we win?</button>
+        <hr>
+        <p>Your pick is:<span id="score">0-0-0-0</span> and you havea chance of winning at 1/<span id="odds">1</span></p>
+        <p>Number of picks calculated:<span id="calcs">0</span></p>
+    </body>
+</html>

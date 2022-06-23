@@ -1,0 +1,48 @@
+<html>
+    <!-- bits.html calculates the possible number of permutations of data in X bits/bytes -->
+    <!-- by Kendrick Smith -->
+    <!-- V 1.0 22 Oct. 2019 -->
+    <head>
+    </head>
+    <body>
+        <h1>Bit Values</h1>
+        <p>Number of bits:</p>
+        <input id="bit">
+        <br>
+        
+        <button onclick="
+                         document.getElementById('calcs').innerHTML = (document.getElementById('calcs').innerHTML*1) + 1;
+                         
+                         bts = document.getElementById('bit').value;
+                         
+                         av = Math.pow(2,bts);
+                         document.getElementById('bits').innerHTML = bts;
+                         document.getElementById('perms').innerHTML = av;
+                         "
+            >Possible Values?</button>
+        <hr>
+        <p><span id="bits">0</span> bits has <span id="perms">1</span> possible permutations.</p>
+        <p>Number of bits calculated:<span id="calcs">0</span></p>
+        <br>
+        <br>
+        <h1>Byte Values</h1>
+        <p>Number of bytes:</p>
+        <input id="byte">
+        <br>
+        
+        <button onclick="
+                         document.getElementById('calcs2').innerHTML = (document.getElementById('calcs2').innerHTML*1) + 1;
+                         
+                         bts = document.getElementById('byte').value;
+                         
+                         av = Math.pow(256,bts);
+                         document.getElementById('bytes').innerHTML = bts;
+                         document.getElementById('Perms').innerHTML = av;
+                         "
+            >Possible Values?</button>
+        <hr>
+        <p><span id="bytes">0</span> bytes has <span id="Perms">1</span> possible permutations.</p>
+        <p>Number of bytes calculated:<span id="calcs2">0</span></p>
+        <p>*note: this number will be very high with few bytes</p>
+    </body>
+</html>

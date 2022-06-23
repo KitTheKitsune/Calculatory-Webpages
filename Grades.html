@@ -1,0 +1,34 @@
+<html>
+    <!-- Grades.html calculates a final grade in a class -->
+    <!-- by Kendrick Smith -->
+    <!-- V 1.0 22 Oct. 2019 -->
+    <head>
+    </head>
+    <body>
+        <p>Homework average:</p>
+        <input id="hw">
+        <br>
+        <p>Lab average:</p>
+        <input id="lab">
+        <br>
+        <p>Midterm grade:</p>
+        <input id="mid">
+        <br>
+        <p>Final exam grade:</p>
+        <input id="fin">
+        <br>
+        <button onclick="
+                         document.getElementById('calcs').innerHTML = (document.getElementById('calcs').innerHTML*1) + 1;
+                         hw = document.getElementById('hw').value;
+                         lab = document.getElementById('lab').value;
+                         mid = document.getElementById('mid').value;
+                         fin= document.getElementById('fin').value;
+                         av = hw*0.25 + lab*0.20 + mid*0.25 + fin*0.30;
+                         document.getElementById('total').innerHTML = Math.round(av*10)/10;
+                         "
+            >Calculate</button>
+        <hr>
+        <p>Your grade is:<span id="total">N/A</span></p>
+        <p>Number of grades calculated:<span id="calcs">0</span></p>
+    </body>
+</html>
